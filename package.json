@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port ${PORT-3001}",
-    "build": "next build",
+    "dev": "node init && next dev --port ${PORT-3001}",
+    "build": "node init && next build",
     "postbuild": "next-sitemap",
-    "start": "next start --port ${PORT-3001}",
+    "start": "node init && next start --port ${PORT-3001}",
     "clean": "rm -rf .next",
     "tsc": "tsc -p .",
     "generate:community-sdk": "graphql-code-generator --require tsconfig-paths/register --config src/graphql/community/generate.ts && prettier --write src/graphql/community/sdk.ts",
